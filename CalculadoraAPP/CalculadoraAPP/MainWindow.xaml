@@ -1,0 +1,84 @@
+﻿<Window x:Class="CalculadoraAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculadoraAPP"
+        mc:Ignorable="d"
+        Background="#d7d9d8"
+        Title="Calculadora" Height="500" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.Row="0" Margin="15" HorizontalAlignment="Left" VerticalAlignment="Stretch" Background="#d7d9d8">
+            <MenuItem Header="☰" FontSize="20" VerticalAlignment="Center">
+
+                <MenuItem x:Name="Estandar"  Header="Estandar" Click="Estandar_Click">
+                    <MenuItem.Icon>
+                    
+                    <Image Source="calculator.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem Header="Cientifica">
+                    <MenuItem.Icon>
+                        <Image Source="cientifica.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Grafica">
+                    <MenuItem.Icon>
+                        <Image Source="grafico.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Programadora">
+                    <MenuItem.Icon>
+                        <Image Source="codificacion.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Calculo de fecha">
+                    <MenuItem.Icon>
+                        <Image Source="calendar.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="Moneda" Header="Moneda" Click="Moneda_Click">
+                    <MenuItem.Icon>
+                        <Image Source="currency-usd.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Volumen">
+                    <MenuItem.Icon>
+                        <Image Source="cube-outline.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Acerca de">
+                    <MenuItem.Icon>
+                        <Image Source="information-variant.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Label Content="Estandar" Grid.ColumnSpan="3" FontSize="20" Grid.Row="0" x:Name="tituloLabel" VerticalAlignment="Center"  FontWeight="Bold" Margin="51,11,35.4,10.4"  />
+
+        
+        
+        <Frame Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="6"  x:Name="frame1"
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
